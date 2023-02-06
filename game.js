@@ -107,17 +107,17 @@
             }
 
             // Check if obstacle is caught
-            if (obstacleX > basketX && obstacleX < basketX + 50 && obstacleY > basketY && obstacleY < basketY + 50) {
+            if (obstacleX > basketX && obstacleX < basketX + 30 && obstacleY > basketY && obstacleY < basketY + 50) {
                 score--;
                 obstacleX = Math.random() * canvas.width;
                 obstacleY = 0;
             }
-            if (obstacle2X > basketX && obstacle2X < basketX + 50 && obstacle2Y > basketY && obstacle2Y < basketY + 50) {
+            if (obstacle2X > basketX && obstacle2X < basketX + 30 && obstacle2Y > basketY && obstacle2Y < basketY + 50) {
                 score-=2;
                 obstacle2X = Math.random() * canvas.width;
                 obstacle2Y = 0;
             }
-            if (obstacle3X > basketX && obstacle3X < basketX + 50 && obstacle3Y > basketY && obstacle3Y < basketY + 50) {
+            if (obstacle3X > basketX && obstacle3X < basketX + 30 && obstacle3Y > basketY && obstacle3Y < basketY + 50) {
                 score-=3;
                 obstacle3X = Math.random() * canvas.width;
                 obstacle3Y = 0;
@@ -154,7 +154,7 @@
             // Check if time is 10 sec
             let currentTime = Date.now();
             let elapsedTime = currentTime - startTime;
-            if (elapsedTime >= 10000) {
+            if (elapsedTime >= 50000) {
                 let popup = document.createElement('div');
                 popup.style.position = 'absolute';
                 popup.style.left = 0;
